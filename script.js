@@ -282,11 +282,6 @@ const Chart = (function () {
 		}
 	}
 
-	function wrap(text) {
-
-
-	}
-
 	return { render: render };
 
 })();
