@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: 'Open Sans', Arial, Sans-serif;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.tile:hover {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+svg {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
