@@ -1,7 +1,7 @@
 # d3-responsive-treemap
 
 1. You can add multiple links to the data sources and render them with the same d3 chart.  
-   e.g.) Links to the dat from different months for a line graph.
+   e.g.) Links to the data from different months. Rendered through the same chart.
 
 2. You can generate custom colors for scale at [Colorgorical](http://vrl.cs.brown.edu/color)  
 
@@ -21,14 +21,14 @@
    
 7. Inside `render` call `updateDimensions` right away passing `window.innerWidth`.
    After that, set dimensions for `svg` and chart components. Then, the usual chart drawing and tool-tipping.
-   DIY'd conditioanl tooltip positioning and word-wrapping function for labels.(mostly for passing test, but I'll use libraries from now on..)
+   DIY'd conditioanl tooltip positioning and word-wrapping function for labels.(mostly for passing test, but use libraries when appropriate.)
 
-8. Ordinal scale's domain is set automatically while using that to get colors (or any discrete value).  
+8. Ordinal scale's domain is set automatically when calling the scale function with arbitrary value to get colors (or any discrete value in the range).  
    This is very convenient for creating legend. Just join the data you passed into the scale and whatever range value bound to that domain value will return.
    
-9. Positioning legend items is done by joing data (domain) and transforming each with index `i % cols` for column. `i/cols` for row.  
+9. Positioning legend items is done by joing data (domain) and transforming each with index. `i % cols` for column. `i/cols` for row.  
 
 10. In `updateDimensions` function, you can set breakpoints and use current innerWidth to 
-update chart-width, height, font-size, legend-width. legend-spacing, etc...
+conditionally update chart-width, height, font-size, legend-width. legend-spacing, etc...
 
-11. At the end oh `Chart` function, you can return an object filled with functions or props that you will need for -re-rendering.
+11. At the end oh `Chart` function, you can return an object filled with functions or props that you will need later (e.g. re-rendering).
